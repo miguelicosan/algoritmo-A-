@@ -1,0 +1,34 @@
+# Ignorar entorno virtual de Python
+venv/
+
+# Ignorar archivos y carpetas específicos para Python
+*.pyc
+__pycache__/
+
+# Ignorar archivos de configuración
+*.pyo
+*.pyc
+*.pyd
+__pycache__/
+.env
+
+# Ignorar archivos de registro y salida
+*.log
+*.pot
+*.pyc
+*.pyo
+*.bak
+*.swp
+
+# Ignorar archivos temporales
+*~
+*.sw[mnpcod]
+*.bak
+*.tmp
+*.cache
+*.log
+*.log?
+*.stackdump
+*.orig
+.venv
+.vscode/
