@@ -2,6 +2,17 @@
 
 Este código implementa el algoritmo A*, que es un algoritmo de búsqueda informada utilizado en la planificación de rutas y en juegos para encontrar el camino más corto entre dos puntos.
 
+La clase `Nodo` tiene cuatro atributos:
+
+- `ciudad`: Este atributo representa el nombre de la ciudad que el nodo representa.
+- `padre`: Este atributo es una referencia al nodo padre de este nodo en el camino. Es `None` si el nodo no tiene padre.
+- `costo_camino`: Este atributo representa el costo acumulado para llegar a este nodo desde el nodo de inicio.
+- `heuristica`: Este atributo es una estimación del costo para llegar desde este nodo al nodo objetivo.
+
+La clase también define un método especial `__lt__` que se utiliza para comparar dos nodos. Este método devuelve `True` si la suma del costo del camino y la heurística del nodo actual es menor que la del otro nodo. Esto es útil para algoritmos que necesitan ordenar o priorizar nodos basándose en el costo total estimado.
+
+Algoritmo A*:
+
 1. Se crean dos nodos, `nodo_inicio` y `nodo_objetivo`, a partir de los parámetros de entrada `inicio` y `objetivo`. El nodo de inicio se inicializa con un costo de camino de 0 y su valor heurístico.
 
 2. Se crean dos listas, `nodos_abiertos` y `nodos_cerrados`. `nodos_abiertos` contiene los nodos que aún no se han explorado pero que se conocen, mientras que `nodos_cerrados` contiene los nodos que ya se han explorado.
